@@ -1,0 +1,87 @@
+/* General Styling */
+.skills {
+    background-color: #ffffdb;
+    padding: 50px 20px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+    font-family: 'Inter', sans-serif;
+    color: #ff7700;
+    margin-bottom: 30px;
+    transform: scale(0.8);
+    opacity: 0;
+    animation: scaleUp 1s ease-out forwards 0.3s;
+  }
+  
+  /* Skills List */
+  .skillsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards 0.5s;
+  }
+  
+  /* Individual Skill Card */
+  .skillCard {
+    background: #fff;
+    border-radius: 16px;
+    width: 220px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeInCard 1.5s forwards;
+  }
+  
+  .skillCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .skillName {
+    font-size: 1.2rem;
+    color: #ff7700;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInCard {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes scaleUp {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
