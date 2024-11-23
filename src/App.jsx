@@ -5,11 +5,13 @@ import Skills from './components/Skills';
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import { LanguageProvider } from "./translations/LanguageContext"; 
 
 function App() {
 
   return (
     <>
+     <LanguageProvider>
       <Navbar />
       <Intro />
       <Projects />
@@ -17,6 +19,7 @@ function App() {
       <About />
       <Contact />
       <Footer />
+     </LanguageProvider>
     </>
   )
 }

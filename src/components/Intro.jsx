@@ -1,8 +1,15 @@
 import styles from '../styles/Intro.module.css';
 import { useInView } from 'react-intersection-observer';
 import { FaLinkedin, FaGithub, FaArrowDown } from 'react-icons/fa'; 
+import { useLanguage } from "../translations/LanguageContext";
+import { translations } from "../translations/translations";
 
 const Intro = () => {
+  const { language } = useLanguage();
+  const heading = translations[language].intro.heading;
+  const subtitle = translations[language].intro.subtitle;
+  const slogan = translations[language].intro.slogan;
+  
   const { ref: nameRef, inView: nameInView } = useInView({
     triggerOnce: true,
     threshold: 0.1
@@ -21,15 +28,15 @@ const Intro = () => {
         ref={nameRef}
         className={`${styles.name} ${nameInView ? styles.fadeIn : ''}`}
       >
-        Hi, I'm Luca
+        {heading}
       </h1>
-      <p className={styles.title}>Full-stack Developer</p>
+      <p className={styles.title}>{subtitle}</p>
 
       <p
         ref={taglineRef}
         className={`${styles.tagline} ${taglineInView ? styles.fadeIn : ''}`}
       >
-        Building clean, functional, and user-focused web applications.
+        {slogan}
       </p>
       <div className={styles.socialLinks}>
         <a

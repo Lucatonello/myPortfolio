@@ -38,6 +38,7 @@ body {
     color: #333;
     transition: color 0.3s ease;
     font-family: var(--font-primary);
+    margin: auto;
   }
   
   .navLinks a:hover {
@@ -47,4 +48,22 @@ body {
   .navLinks a:active {
     color: #cc5a00;
   }
-  
+  .languageButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .languageButton.en {
+    background-color: #ff7700;  /* Orange color for English */
+    color: white;
+  }
+  .languageButton.es {
+    background-color: #0068de;
+    color: white;
+  }
+  .languageButton:hover {
+    opacity: 0.8;
+  }
