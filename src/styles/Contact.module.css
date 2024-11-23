@@ -1,13 +1,21 @@
-/* Contact Section Styling */
+/* Contact Section Base Styles */
 .contactSection {
     background-color: #ffffdb;
-    padding: 50px 20px;
+    padding: 60px 20px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     position: relative;
+    opacity: 0; /* Hidden initially */
+    transform: translateY(50px); /* Slide-in effect */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .animateSection {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Reset slide */
   }
   
   .contactContent {
@@ -18,27 +26,39 @@
   }
   
   .sectionTitle {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-family: 'Inter', sans-serif;
     color: #ff7700;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
   
   .contactInfo {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* For vertical alignment */
+    gap: 30px;
+    width: 100%;
   }
   
   .contactItem {
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+    border: 2px solid #ff7700;
+    border-radius: 8px;
+    opacity: 0; /* Hidden initially */
+    transform: translateY(30px); /* Slide-in effect */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .animateItem {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Reset slide */
   }
   
   .icon {
-    font-size: 24px;
+    font-size: 26px;
     color: #ff7700;
   }
   
@@ -47,14 +67,16 @@
     color: #333;
     font-family: 'Inter', sans-serif;
   }
-  
-  /* Arrow to Scroll Up */
+  .contactItem:hover {
+    transform: scale(1.05); /* Slight scaling effect */
+    background-color: #fff7d1; /* Light background on hover */
+  }
   .arrow {
-    font-size: 26px;
+    font-size: 24px;
     color: #ff7700;
     text-decoration: none;
     position: absolute;
-    bottom: 20px; /* Position the arrow near the bottom */
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     transition: color 0.3s ease;

@@ -1,14 +1,23 @@
 import styles from '../styles/Projects.module.css'
 import { FaGithub, FaExternalLinkAlt, FaArrowDown } from 'react-icons/fa';
+import { useInView } from 'react-intersection-observer';
 import project1 from '../assets/project1.png';
 
 const Projects = () => {
+    const { ref: projectRef, inView: projectInView } = useInView({
+      triggerOnce: true,
+      threshold: 0.1
+    });
+    
     return (
-      <section className={styles.projects} id='projects'>
-        <h2 className={styles.sectionTitle}>Projects</h2>
+      <section  ref={projectRef} className={styles.projects} id='projects'>
+        <h2 className={`${styles.sectionTitle} ${projectInView ? styles.fadeIn : ''}`}>
+          My Projects
+        </h2>
         <div className={styles.projectList}>
           {/* LinkedIn Clone */}
-          <div className={styles.projectCard}>
+          <div
+          className={`${styles.projectCard} ${projectInView ? styles.cardSlideUp : ''}`}>
             <div
               className={styles.projectImage}
               style={{
@@ -47,7 +56,8 @@ const Projects = () => {
           </div>
   
           {/* Placeholder 1 */}
-          <div className={styles.projectCard}>
+          <div
+          className={`${styles.projectCard2} ${projectInView ? styles.cardSlideUp : ''}`}>
             <div
               className={styles.projectImage}
               style={{
@@ -76,7 +86,8 @@ const Projects = () => {
           </div>
   
           {/* Placeholder 2 */}
-          <div className={styles.projectCard}>
+          <div
+          className={`${styles.projectCard3} ${projectInView ? styles.cardSlideUp : ''}`}>
             <div
               className={styles.projectImage}
               style={{

@@ -1,6 +1,4 @@
-/* General Styling */
 .projects {
-  /* background-color: #ffffdb; */
   background-color: white;
   padding: 50px 20px;
   text-align: center;
@@ -10,15 +8,26 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+  background-image: linear-gradient(90deg, rgba(255, 119, 0, 0.1) 1px, transparent 1px),
+                    linear-gradient(0deg, rgba(255, 119, 0, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 0;
 
+}
 .sectionTitle {
   font-size: 2rem;
   font-family: 'Inter', sans-serif;
   color: #ff7700;
   margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 0.5s ease;
 }
 
+.fadeIn {
+  opacity: 1;
+  transform: translateY(0);
+}
 /* Project List */
 .projectList {
   display: flex;
@@ -36,8 +45,41 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.projectCard2 {
+  background: #fff;
+  border-radius: 16px;
+  width: 320px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 2s ease, transform 2s ease;
+}
+.projectCard3 {
+  background: #fff;
+  border-radius: 16px;
+  width: 320px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 3s ease, transform 3s ease;
+}
+
+.cardSlideUp {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .projectCard:hover {
@@ -118,6 +160,7 @@
 .icon:hover {
   color: #cc5a00;
 }
+
 .arrow {
   font-size: 26px;
   color: #ff7700;
