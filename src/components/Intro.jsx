@@ -1,5 +1,5 @@
 import styles from '../styles/Intro.module.css';
-import { FaLinkedin, FaGithub } from 'react-icons/fa'; 
+import { FaLinkedin, FaGithub, FaArrowDown } from 'react-icons/fa'; 
 
 const Intro = () => {
   return (
@@ -25,6 +25,9 @@ const Intro = () => {
         <FaGithub />
       </a>
     </div>
+    <a href="#projects" className={styles.arrow}>
+      <FaArrowDown />
+    </a>
   </section>
   );
 };

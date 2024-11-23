@@ -1,8 +1,15 @@
 /* General Styling */
 .projects {
-  background-color: #ffffdb;
+  /* background-color: #ffffdb; */
+  background-color: white;
   padding: 50px 20px;
   text-align: center;
+  height: calc(100vh - 100px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .sectionTitle {
@@ -110,4 +117,18 @@
 
 .icon:hover {
   color: #cc5a00;
+}
+.arrow {
+  font-size: 26px;
+  color: #ff7700;
+  text-decoration: none;
+  position: absolute;
+  bottom: 20px; /* Adjust this value to position the arrow at the bottom */
+  left: 50%;
+  transform: translateX(-50%); 
+  transition: color 0.3s ease;
+}
+
+.arrow:hover {
+  color: #cc5a00; 
 }

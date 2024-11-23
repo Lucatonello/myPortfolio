@@ -1,0 +1,66 @@
+/* Contact Section Styling */
+.contactSection {
+    background-color: #ffffdb;
+    padding: 50px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .contactContent {
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+    font-family: 'Inter', sans-serif;
+    color: #ff7700;
+    margin-bottom: 30px;
+  }
+  
+  .contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .contactItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .icon {
+    font-size: 24px;
+    color: #ff7700;
+  }
+  
+  .contactText {
+    font-size: 1.2rem;
+    color: #333;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Arrow to Scroll Up */
+  .arrow {
+    font-size: 26px;
+    color: #ff7700;
+    text-decoration: none;
+    position: absolute;
+    bottom: 20px; /* Position the arrow near the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: color 0.3s ease;
+  }
+  
+  .arrow:hover {
+    color: #cc5a00;
+  }
+  

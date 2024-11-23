@@ -1,13 +1,20 @@
-/* Import Google Fonts */
 :root {
     --font-primary: 'Inter', sans-serif;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 .intro {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
   padding: 50px 20px;
   background-color: #ffffdb;
   color: #333;
+  height: calc(100vh - 171.98px);
+   margin-top: -72px;
 }
 
 .name {
@@ -20,7 +27,23 @@
   font-size: 1.5rem;
   margin: 10px 0;
   font-weight: 400;
-  font-family: var(--font-primary);}
+  font-family: var(--font-primary);
+}
+.arrow {
+  font-size: 26px;
+  color: #ff7700;
+  text-decoration: none;
+  position: absolute;
+  bottom: 20px;
+  z-index: 10;
+  left: 50%;
+  transform: translateX(-50%); 
+  transition: color 0.3s ease;
+}
+
+.arrow:hover {
+  color: #cc5a00; 
+}
 
 .tagline {
   font-size: 1rem;

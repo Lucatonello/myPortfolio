@@ -1,0 +1,38 @@
+/* Footer Section Styling */
+.footerSection {
+    background-color: #ff7700;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+  }
+  
+  .footerContent {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .socialLinks {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .icon {
+    font-size: 28px;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .icon:hover {
+    color: #ffffdb;
+  }
+  
+  .copyText {
+    font-size: 0.9rem;
+    color: white;
+    font-family: 'Inter', sans-serif;
+  }
+  

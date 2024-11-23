@@ -1,5 +1,5 @@
 import styles from '../styles/Projects.module.css'
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaArrowDown } from 'react-icons/fa';
 import project1 from '../assets/project1.png';
 
 const Projects = () => {
@@ -104,6 +104,9 @@ const Projects = () => {
             </div>
           </div>
         </div>
+        <a href="#skills" className={styles.arrow}>
+          <FaArrowDown />
+        </a>
       </section>
     );
   };

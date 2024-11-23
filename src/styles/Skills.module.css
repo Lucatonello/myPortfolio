@@ -1,6 +1,19 @@
+:root {
+  --font-primary: 'Inter', sans-serif;
+}
+h3, p {
+  font-family: var(--font-primary);
+  color: #333333;
+}
 .skillsSection {
   background-color: #ffffdb;
   padding: 50px 20px;
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ position: relative;
 }
 .titleContainer {
   display: flex;
@@ -73,4 +86,18 @@
   background-color: white;
   border: 2px solid black;
   border-radius: 8px;
+}
+.arrow {
+  font-size: 26px;
+  color: #ff7700;
+  text-decoration: none;
+  position: absolute;
+  bottom: 20px; /* Adjust this value to position the arrow at the bottom */
+  left: 50%;
+  transform: translateX(-50%); 
+  transition: color 0.3s ease;
+}
+
+.arrow:hover {
+  color: #cc5a00; 
 }

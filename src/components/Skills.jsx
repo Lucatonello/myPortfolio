@@ -1,8 +1,9 @@
 import styles from '../styles/Skills.module.css';
+import { FaArrowDown } from 'react-icons/fa';
   
   const Skills = () => {
     return (
-      <div className={styles.skillsSection}>
+      <div className={styles.skillsSection} id='skills'>
         <div className={styles.titleContainer}>
           <h2 className={styles.sectionTitle}>Skills</h2>
         </div>
@@ -147,6 +148,10 @@ import styles from '../styles/Skills.module.css';
             </div>
           </div>
         </div>
+
+        <a href="#about" className={styles.arrow}>
+          <FaArrowDown />
+        </a>
 
       </div>
     );
