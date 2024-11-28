@@ -1,12 +1,18 @@
 import styles from '../styles/Contact.module.css'
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaArrowUp } from 'react-icons/fa';
 import { useInView } from 'react-intersection-observer';
+import { useLanguage } from "../translations/LanguageContext";
+import { translations } from "../translations/translations";
+
 
 function Contact() {
     const { ref: sectionRef, inView: sectionInView } = useInView({
         triggerOnce: true, // Animation runs only once when the element is in view
         threshold: 0.2, // Trigger when 20% of the element is visible
       });
+
+    const { language } = useLanguage();
+    const heading = translations[language].contact.heading;
     
     return (
         <section
@@ -15,7 +21,7 @@ function Contact() {
             ref={sectionRef}
             >
             <div className={styles.contactContent}>
-                <h2 className={styles.sectionTitle}>Contact Me</h2>
+                <h2 className={styles.sectionTitle}>{heading}</h2>
                 <div className={styles.contactInfo}>
                 <div className={`${styles.contactItem} ${sectionInView ? styles.animateItem : ''}`}>
                     <FaPhoneAlt className={styles.icon} />

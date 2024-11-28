@@ -1,7 +1,13 @@
 import styles from '../styles/Footer.module.css'
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { useLanguage } from "../translations/LanguageContext";
+import { translations } from "../translations/translations";
+
 
 function Footer() {
+  const { language } = useLanguage();
+  const rights = translations[language].footer.rights;
+
     return (
         <footer className={styles.footerSection}>
         <div className={styles.footerContent}>
@@ -14,7 +20,7 @@ function Footer() {
             </a>
           </div>
           <p className={styles.copyText}>
-            &copy; {new Date().getFullYear()} Luca Tonello. All rights reserved.
+            &copy; {new Date().getFullYear()} {rights}
           </p>
         </div>
       </footer>

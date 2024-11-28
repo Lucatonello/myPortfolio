@@ -2,17 +2,32 @@ import styles from '../styles/Projects.module.css'
 import { FaGithub, FaExternalLinkAlt, FaArrowDown } from 'react-icons/fa';
 import { useInView } from 'react-intersection-observer';
 import project1 from '../assets/project1.png';
+import { useLanguage } from "../translations/LanguageContext";
+import { translations } from "../translations/translations";
 
 const Projects = () => {
     const { ref: projectRef, inView: projectInView } = useInView({
       triggerOnce: true,
       threshold: 0.1
     });
+
+    const { language } = useLanguage();
+    const heading = translations[language].projects.heading;
+
+    const project1Title = translations[language].projects.list[0].title;
+    const project1Description = translations[language].projects.list[0].description;
+
+    const project2Title = translations[language].projects.list[1].title;
+    const project2Description = translations[language].projects.list[1].description;
+
+    const project3Title = translations[language].projects.list[2].title;
+    const project3Description = translations[language].projects.list[2].description;
+
     
     return (
       <section  ref={projectRef} className={styles.projects} id='projects'>
         <h2 className={`${styles.sectionTitle} ${projectInView ? styles.fadeIn : ''}`}>
-          My Projects
+          {heading}
         </h2>
         <div className={styles.projectList}>
           {/* LinkedIn Clone */}
@@ -24,8 +39,8 @@ const Projects = () => {
                 backgroundImage: `url(${project1})` }}
             ></div>
             <div className={styles.projectInfo}>
-              <h3>LinkedIn Clone</h3>
-              <p>A fully-featured LinkedIn-like platform with profiles, posts, and messaging.</p>
+              <h3>{project1Title}</h3>
+              <p>{project1Description}</p>
               <div className={styles.technologyLogos}>
 
                 {/* react logo */}
@@ -65,8 +80,8 @@ const Projects = () => {
               }}
             ></div>
             <div className={styles.projectInfo}>
-              <h3>Project 1</h3>
-              <p>A brief description of this placeholder project.</p>
+              <h3>{project2Title}</h3>
+              <p>{project2Description}</p>
               <div className={styles.technologyLogos}>
                 {/* Replace with appropriate logos */}
                 <svg className={styles.techLogo} xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 32 32" fill="#ff7700">
@@ -95,8 +110,8 @@ const Projects = () => {
               }}
             ></div>
             <div className={styles.projectInfo}>
-              <h3>Project 2</h3>
-              <p>A brief description of this placeholder project.</p>
+              <h3>{project3Title}</h3>
+              <p>{project3Description}</p>
               <div className={styles.technologyLogos}>
                 {/* Replace with appropriate logos */}
                 <svg className={styles.techLogo} xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 32 32" fill="#ff7700">

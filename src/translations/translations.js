@@ -33,7 +33,7 @@ export const translations = {
             heading: "Contact me",
         },
         footer: {
-            rights: "© 2024 Luca Tonello. All rights reserved."
+            rights: "Luca Tonello. All rights reserved."
         }
       },
       es: {
@@ -70,7 +70,7 @@ export const translations = {
               heading: "Contactame",
           },
           footer: {
-              rights: "© 2024 Luca Tonello. Todos los derechos reservados."
+              rights: "Luca Tonello. Todos los derechos reservados."
         }
       }
     }

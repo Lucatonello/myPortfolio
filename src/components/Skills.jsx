@@ -1,6 +1,8 @@
 import styles from '../styles/Skills.module.css';
 import { useInView } from 'react-intersection-observer';
 import { FaArrowDown } from 'react-icons/fa';
+import { useLanguage } from "../translations/LanguageContext";
+import { translations } from "../translations/translations";
   
   const Skills = () => {
     const { ref: reactRef, inView: reactInView } = useInView({
@@ -12,10 +14,14 @@ import { FaArrowDown } from 'react-icons/fa';
       triggerOnce: true,
       threshold: 0.1
     });
+
+    const { language } = useLanguage();
+    const heading = translations[language].skills.heading;
+
     return (
       <div className={styles.skillsSection} id='skills'>
         <div className={styles.titleContainer}>
-          <h2 className={styles.sectionTitle}>Skills</h2>
+          <h2 className={styles.sectionTitle}>{heading}</h2>
         </div>
         <div className={styles.skillsContainer}>
           <div className={styles.section}>
