@@ -198,4 +198,7 @@
   .projects {
     padding-top: 70px; /* Adjust padding-top to prevent the content from shifting upwards */
   }
+  .sectionTitle {
+    margin: 13px;
+  }
 }

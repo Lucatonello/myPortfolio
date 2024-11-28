@@ -126,10 +126,11 @@ h3, p {
   color: #cc5a00; 
 }
 @media (max-width: 555px) {
-  h3 {
-    margin: 5px;
+  h3, h2 {
+    margin: 7px;
   }
   .techList {
-    gap: 5px;
+    gap: 7px;
   }
+
 }
