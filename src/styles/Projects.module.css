@@ -6,7 +6,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background-image: linear-gradient(90deg, rgba(255, 119, 0, 0.1) 1px, transparent 1px),
                     linear-gradient(0deg, rgba(255, 119, 0, 0.1) 1px, transparent 1px);
@@ -34,6 +34,9 @@
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
+  margin-top: 20px;
+  flex-grow: 1;
+  overflow-y: auto;
 }
 
 /* Individual Project Card */
@@ -41,6 +44,7 @@
   background: #fff;
   border-radius: 16px;
   width: 320px;
+  height: 380px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   display: flex;
@@ -54,6 +58,7 @@
   background: #fff;
   border-radius: 16px;
   width: 320px;
+  height: 380px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   display: flex;
@@ -67,6 +72,7 @@
   background: #fff;
   border-radius: 16px;
   width: 320px;
+  height: 380px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   display: flex;
@@ -174,4 +180,22 @@
 
 .arrow:hover {
   color: #cc5a00; 
+}
+@media (max-width: 710px) {
+  .projectCard, .projectCard2, .projectCard3 {
+    width: 90%;
+    height: auto;
+  }
+  .projectList {
+    gap: 20px; /* Reduce gap between project cards */
+    justify-content: center;
+  }
+}
+@media (max-width: 555px) {
+  .projectCard, .projectCard2, .projectCard3 {
+    width: 100%; /* Make the cards take up full width on very small screens */
+  }
+  .projects {
+    padding-top: 70px; /* Adjust padding-top to prevent the content from shifting upwards */
+  }
 }

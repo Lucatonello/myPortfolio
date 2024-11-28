@@ -1,5 +1,10 @@
 export const translations = {
     en: {
+        nav: {
+          about: "About",
+          projects: "Projects",
+          contact: "Contact"
+        },
         intro: {
           heading: "Hi, I'm Luca",
           subtitle: "Full-stack Developer",
@@ -37,10 +42,15 @@ export const translations = {
         }
       },
       es: {
+        nav: {
+          about: "Sobre mi",
+          projects: "Projectos",
+          contact: "Contacto"
+        },
         intro: {
             heading: "Hola, soy Luca",
             subtitle: "Desarrollador Full-stack",
-            slogan: "Construyendo aplicaciones web limpias, funcionales y centradas en el usuario.",
+            slogan: "Construyo aplicaciones web limpias, funcionales y centradas en el usuario.",
         },
         projects: {
             heading: "Mis proyectos",

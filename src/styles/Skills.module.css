@@ -40,6 +40,7 @@ h3, p {
 }
 .techList {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
 }
 .techItem {
@@ -49,7 +50,7 @@ h3, p {
   padding: 7px;
   opacity: 0.3;
   transform: translateY(20px);
-  transition: opacity 4s ease, transform 4s ease;
+  transition: opacity 4s ease, transform 4s ease, background-color 0.3s ease;;
 }
 .techItem2 {
   display: flex;
@@ -58,7 +59,7 @@ h3, p {
   padding: 7px;
   opacity: 0;
   transform: translateY(-20px);
-  transition: opacity 2s ease, transform 2s ease;
+  transition: opacity 2s ease, transform 2s ease, background-color 0.3s ease;;
 }
 .techItem:hover, .techItem2:hover {
   background-color: #fff7d1;

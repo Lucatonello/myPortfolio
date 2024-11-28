@@ -1,73 +1,169 @@
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
 }
-:root {
-    --font-primary: 'Inter', sans-serif;
+.navbar {
+  background-color: #ffffdb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  font-family: var(--font-primary);
+  position: relative;
+  z-index: 999;
 }
-  
-  .navbar {
-    background-color: #ffffdb;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    font-family: var(--font-primary);
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ff7700;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navLinks li {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+  font-family: var(--font-primary);
+}
+
+.navLinks a:hover {
+  color: #ff7700;
+}
+
+.navLinks a:active {
+  color: #cc5a00;
+}
+
+.languageButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.4s ease, color 0.4s ease, opacity 0.3s ease;
+  font-family: var(--font-primary);
+}
+
+.languageButton.en {
+  background-color: #ff7700;
+  color: white;
+}
+
+.languageButton.es {
+  background-color: #0068de;
+  color: white;
+}
+
+.languageButton:hover {
+  opacity: 0.8;
+}
+
+/* Sidebar (New) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -100vw; /* Sidebar hidden off-screen */
+  height: 100vh;
+  width: 250px;
+  background-color: #ffffdb;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+  transition: right 0.3s ease-in-out;
+  padding: 30px 20px;
+  z-index: 999; /* Sidebar above other elements */
+}
+
+.sidebar.open {
+  right: 0; /* Sidebar slides into view when open */
+}
+
+.sidebar .closeBtn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+}
+
+.sidebar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar li {
+  font-size: 1.2rem;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #333;
+  font-family: var(--font-primary);
+  transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+  color: #ff7700;
+}
+
+/* Hamburger (New) */
+.hamburger {
+  display: none; /* Hidden on larger screens */
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 3px;
+}
+
+/* Mobile Styles (555px or below) */
+@media (max-width: 555px) {
+  .hamburger {
+      display: flex; /* Show hamburger icon on smaller screens */
+      position: sticky;
+      top: 10px;
+      right: 20px;
   }
-  
-  .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #ff7700;
-  }
-  
+
   .navLinks {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 20px;
+      display: none; /* Hide navigation links on small screens */
   }
-  
-  .navLinks li {
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    font-weight: 400; 
+
+  .sidebar.open {
+      right: 0; /* Sidebar slides in */
   }
-  
-  .navLinks a {
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s ease;
-    font-family: var(--font-primary);
-    margin: auto;
+
+  /* Make sure the sidebar is hidden by default */
+  .sidebar {
+      right: -100vw;
   }
-  
-  .navLinks a:hover {
-    color: #ff7700;
-  }
-  
-  .navLinks a:active {
-    color: #cc5a00;
-  }
+
+  /* Move language button into sidebar */
   .languageButton {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.4s ease, color 0.4s ease;
-    font-family: var(--font-primary);
+      margin-top: 20px;
   }
-  .languageButton.en {
-    background-color: #ff7700; 
-    color: white;
-  }
-  .languageButton.es {
-    background-color: #0068de;
-    color: white;
-  }
-  .languageButton:hover {
-    opacity: 0.8;
-  }
+}
