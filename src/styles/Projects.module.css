@@ -189,12 +189,16 @@
   .projectList {
     gap: 20px; /* Reduce gap between project cards */
     justify-content: center;
+    height: 60%;
   }
 }
 @media (max-width: 555px) {
   .projectCard, .projectCard2, .projectCard3 {
     width: 100%; /* Make the cards take up full width on very small screens */
-    height: 245px;
+    height: 300px;
+  }
+  .projectImage {
+    height: 100px;
   }
   .projects {
     padding-top: 70px; /* Adjust padding-top to prevent the content from shifting upwards */
