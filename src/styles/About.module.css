@@ -94,14 +94,12 @@
     color: #ff7700;
     text-decoration: none;
     position: absolute;
-    bottom: 20px; /* Positioning the arrow near the bottom */
-    left: 50%;
+    bottom: 20px; 
+    left: 49%;
     transform: translateX(-50%);
     transition: color 0.3s ease;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 2s ease, transform 2s ease;
   }
+
   
   .fadeInArrow {
     opacity: 1;
