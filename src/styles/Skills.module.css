@@ -125,3 +125,11 @@ h3, p {
 .arrow:hover {
   color: #cc5a00; 
 }
+@media (max-width: 555px) {
+  h3 {
+    margin: 5px;
+  }
+  .techList {
+    gap: 5px;
+  }
+}
