@@ -1,9 +1,9 @@
 import styles from '../styles/Projects.module.css'
 import { FaGithub, FaExternalLinkAlt, FaArrowDown } from 'react-icons/fa';
 import { useInView } from 'react-intersection-observer';
-import project1 from '../assets/project1.png'
-import project2 from '../assets/project2.png';
-import project3 from '../assets/project3.png';
+import project1 from '../../public/project1.png'
+import project2 from '../../public/project2.png';
+import project3 from '../../public/project3.png';
 import { useLanguage } from "../translations/LanguageContext";
 import { translations } from "../translations/translations";
 

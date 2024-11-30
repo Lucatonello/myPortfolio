@@ -1,5 +1,5 @@
 import styles from '../styles/About.module.css'
-import myPicture from '../assets/proffesional_picture.jfif'
+import myPicture from '../../public/proffesional_picture.jfif'
 import { FaArrowDown } from 'react-icons/fa';
 import { useInView } from 'react-intersection-observer';
 import { useLanguage } from "../translations/LanguageContext";
