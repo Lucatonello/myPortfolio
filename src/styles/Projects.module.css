@@ -53,6 +53,7 @@
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 1s ease, transform 1s ease;
+  transition: box-shadow 0.3s ease-in-out;
 }
 .projectCard2 {
   background: #fff;
@@ -67,6 +68,7 @@
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 2s ease, transform 2s ease;
+  transition: box-shadow 0.3s ease-in-out;
 }
 .projectCard3 {
   background: #fff;
@@ -81,6 +83,7 @@
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 3s ease, transform 3s ease;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .cardSlideUp {
@@ -88,8 +91,8 @@
   transform: translateY(0);
 }
 
-.projectCard:hover {
-  transform: translateY(-8px);
+.projectCard:hover, .projectCard2:hover, .projectCard3:hover {
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
 }
 

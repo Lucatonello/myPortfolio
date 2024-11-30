@@ -15,20 +15,22 @@ export const translations = {
           list: [
             {
               title: "LinkedIn Clone",
-              description: "A fully-featured LinkedIn-like platform with profiles, posts, and messaging.",
+              description: "A LinkedIn-like platform with profiles, posts, jobs, and messaging.",
             },
             {
-              title: "Project 2",
-              description: "A brief description of this placeholder project.",
+              title: "Messaging App",
+              description: "Messaging app with private/group chats, customization, responsiveness.",
             },
             {
-              title: "Project 3",
-              description: "A brief description of this placeholder project.",
+              title: "Shopping Cart",
+              description: "A simple e-commerce app to browse, add to cart, and checkout.",
             },
           ],
         },
         skills: {
           heading: "Skills",
+          tools: "Tools",
+          languages: "Other languages"
         },
         about: {
             heading: "About me",
@@ -57,20 +59,22 @@ export const translations = {
             list: [
                 {
                   title: "LinkedIn Clone",
-                  description: "Una plataforma completa similar a LinkedIn, con perfiles, publicaciones y mensajería.",
+                  description: "Plataforma tipo LinkedIn con perfiles, publicaciones y trabajos.",
                 },
                 {
-                  title: "Project 2",
-                  description: "A brief description of this placeholder project.",
+                  title: "App de mensajes",
+                  description: "App de mensajería con chats privados, personalización y diseño",
                 },
                 {
-                  title: "Project 3",
-                  description: "A brief description of this placeholder project.",
+                  title: "Carrito de compras",
+                  description: "Una app de comercio electrónico para explorar, agregar y pagar.",
                 },
             ],
         },
         skills: {
             heading: "Habilidades",
+            tools: "Herramientas",
+            languages: "Otros lenguajes"
           },
           about: {
               heading: "Sobre mi",

@@ -17,7 +17,8 @@ import { translations } from "../translations/translations";
 
     const { language } = useLanguage();
     const heading = translations[language].skills.heading;
-
+    const tools = translations[language].skills.tools;
+    const languages = translations[language].skills.languages;
     return (
       <div className={styles.skillsSection} id='skills'>
         <div className={styles.titleContainer}>
@@ -38,7 +39,6 @@ import { translations } from "../translations/translations";
                 <p className={styles.techName}>React</p>
               </div>
 
-              {/* CSS */}
               <div
                 className={`${styles.techItem2} ${reactInView ? styles.fadeInUp : ''}`}
                 ref={reactRef}
@@ -142,7 +142,7 @@ import { translations } from "../translations/translations";
           </div>
 
           <div className={styles.section}>
-            <h3>Tools</h3>
+            <h3>{tools}</h3>
             <div className={styles.techList}>
             <div
                 className={`${styles.techItem} ${reactInView ? styles.fadeInUp : ''}`}
@@ -189,7 +189,7 @@ import { translations } from "../translations/translations";
           </div>
 
           <div className={styles.section}>
-            <h3>Other languages</h3>
+            <h3>{languages}</h3>
             <div className={styles.techList}>
 
             <div
