@@ -7,7 +7,7 @@ Welcome to my **Portfolio Website**, a showcase of my skills, projects, and prof
 ## Features
 
 - **Projects**: Highlights of my work, including descriptions, tech stacks, and live demos.
-- **Skills**: A list of all the technologies i dominate
+- **Skills**: A list of all the technologies i use.
 - **About Me**: Learn more about my background and interests.
 - **Contact**: My contact information.
 
