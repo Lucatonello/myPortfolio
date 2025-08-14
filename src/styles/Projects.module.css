@@ -30,10 +30,10 @@
 }
 /* Project List */
 .projectList {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-gap: 30px; /* spacing between cards */
+  justify-items: center;
   margin-top: 20px;
   flex-grow: 1;
   overflow-y: auto;
@@ -44,7 +44,7 @@
   background: #fff;
   border-radius: 16px;
   width: 320px;
-  height: 380px;
+  height: 345px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   display: flex;
@@ -59,7 +59,7 @@
   background: #fff;
   border-radius: 16px;
   width: 320px;
-  height: 380px;
+  height: 345px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   display: flex;
@@ -74,7 +74,7 @@
   background: #fff;
   border-radius: 16px;
   width: 320px;
-  height: 380px;
+  height: 345px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   display: flex;
@@ -85,14 +85,28 @@
   transition: opacity 3s ease, transform 3s ease;
   transition: box-shadow 0.3s ease-in-out;
 }
+.projectCard4 {
+  background: #fff;
+  border-radius: 16px;
+  width: 320px;
+  height: 345px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 4s ease, transform 4s ease;
+  transition: box-shadow 0.3s ease-in-out;
+}
 
 .cardSlideUp {
   opacity: 1;
   transform: translateY(0);
 }
 
-.projectCard:hover, .projectCard2:hover, .projectCard3:hover {
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+.projectCard:hover, .projectCard2:hover, .projectCard3:hover, .projectCard4:hover {
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -175,7 +189,7 @@
   color: #ff7700;
   text-decoration: none;
   position: absolute;
-  bottom: 20px; /* Adjust this value to position the arrow at the bottom */
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%); 
   transition: color 0.3s ease;
@@ -185,26 +199,27 @@
   color: #cc5a00; 
 }
 @media (max-width: 710px) {
-  .projectCard, .projectCard2, .projectCard3 {
+  .projectCard, .projectCard2, .projectCard3, .projectCard4 {
     width: 90%;
     height: auto;
   }
   .projectList {
-    gap: 20px; /* Reduce gap between project cards */
-    justify-content: center;
+    grid-template-columns: 1fr; /* 1 column */
+    gap: 20px;
+    justify-items: center;
     height: 60%;
   }
 }
 @media (max-width: 555px) {
-  .projectCard, .projectCard2, .projectCard3 {
-    width: 100%; /* Make the cards take up full width on very small screens */
+  .projectCard, .projectCard2, .projectCard3, .projectCard4 {
+    width: 100%;
     height: 300px;
   }
   .projectImage {
     height: 100px;
   }
   .projects {
-    padding-top: 70px; /* Adjust padding-top to prevent the content from shifting upwards */
+    padding-top: 70px;
   }
   .sectionTitle {
     margin: 13px 0px;

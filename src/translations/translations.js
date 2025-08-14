@@ -25,6 +25,10 @@ export const translations = {
               title: "Shopping Cart",
               description: "A simple e-commerce app to browse, add to cart, and checkout.",
             },
+            {
+              title: "Comment finder",
+              description: "Chrome extension to instantly search YouTube video comments by keyword.",
+            }
           ],
         },
         skills: {
@@ -69,6 +73,10 @@ export const translations = {
                   title: "Carrito de compras",
                   description: "Una app de comercio electrónico para explorar, agregar y pagar.",
                 },
+                {
+                  title: "Comment finder",
+                  description: "Extensión de Chrome para buscar comentarios de YouTube por palabra."
+                }
             ],
         },
         skills: {
